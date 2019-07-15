@@ -44,7 +44,7 @@
         $youtube = $_POST['youtube'];
         $admisson = $_POST['admisson'];
         $graduate = $_POST['graduate'];
-        $result = $user->update($user_id,$username,$email,$firstname,$lastname,,$status,$course,$address,$website,$fb,$twitter,$insta,$youtube,$admisson,$graduate);
+        $result = $user->update($user_id,$username,$email,$firstname,$lastname,$status,$course,$address,$website,$fb,$twitter,$insta,$youtube,$admisson,$graduate);
 
         if($result){
             echo"<script>window.location.replace('user.php');</script>";

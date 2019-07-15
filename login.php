@@ -48,7 +48,7 @@ include_once 'classes/User.php';
                     <div class="login-content">
                         <div class="login-logo">
                             <a href="#">
-                                <img src="images/icon/logo.png" alt="CoolAdmin">
+                                <img src="admin/images/icon/kredoportal2admin.png" alt="CoolAdmin">
                             </a>
                         </div>
                         <div class="login-form">

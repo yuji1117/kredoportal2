@@ -1,4 +1,5 @@
 <?php require_once "header.php"; ?>
+
 <!-- MAIN CONTENT-->
 <div class="main-content">
     <div class="section__content section__content--p30">
@@ -36,9 +37,13 @@
                             <button class="au-btn-filter">
                                 <i class="zmdi zmdi-filter-list"></i>filters</button>
                         </div>
+
                         <div class="table-data__tool-right">
-                            <button class="au-btn au-btn-icon au-btn--green au-btn--small">
-                                <i class="zmdi zmdi-plus"></i>add item</button>
+                            <!-- Button trigger modal -->
+                            <button class="au-btn au-btn-icon au-btn--green au-btn--small" data-toggle="modal" data-target="#add_user">
+                                <i class="zmdi zmdi-plus"></i>add user</button>
+
+
                             <div class="rs-select2--dark rs-select2--sm rs-select2--dark2">
                                 <select class="js-select2" name="type">
                                     <option selected="selected">Export</option>
@@ -249,7 +254,7 @@
 </div>
 
 </div>
-
+<?php require_once "modals.php"; ?>
 <!-- Jquery JS-->
 <script src="vendor/jquery-3.2.1.min.js"></script>
 <!-- Bootstrap JS-->
