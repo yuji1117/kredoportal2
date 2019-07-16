@@ -64,16 +64,49 @@
                                             <span class="au-checkmark"></span>
                                         </label>
                                     </th>
-                                    <th>name</th>
-                                    <th>email</th>
-                                    <th>description</th>
-                                    <th>date</th>
+                                    <th>ID</th>
+                                    <th>username</th>
+                                    <th>Firstname</th>
+                                    <th>Lastname</th>
                                     <th>status</th>
-                                    <th>price</th>
+                                    <th>course</th>
+                                    <th>Update at</th>
                                     <th></th>
                                 </tr>
                             </thead>
                             <tbody>
+                            <?php
+                                $get_users = $users->selectAll();
+
+                                if($get_users){
+                                    foreach($get_users as $key => $row){
+                                        $id = $row['user_id'];
+                                        echo"<tr>";
+                                        echo"<td>".$row['user_id']. "</td>";
+                                        echo"<td>".$row['username']. "</td>";
+                                        echo"<td>".$row['firstname']."</td>";
+                                        echo"<td>".$row['lastname']."</td>";
+                                        echo"<td>".$row['status']."</td>";
+                                        echo"<td>".$row['course']."</td>";
+                                        echo"<td>".$row['updated_at']."</td>";
+                                        echo"<td>
+                                        <a href='edit_user.php?user_id=$id' class='btn btn-info btn-sm'>Edit</a>";
+
+                                        ?>
+                                        <a href='user_action.php?action=delete&user_id=<?php echo $id; ?>' class='btn btn-danger btn-sm' onclick='return confirm("Are you sure you want to delete?");'>Delete</a>                                    
+                                        </td>
+                                    </tr>
+
+                                    <?php
+                                    }
+
+                                }else{
+                                    echo"<tr><td colspan='7' class='text-center'>Nothing toshow</td></tr>";
+                                }                    
+                            ?>
+
+
+                            
                                 <tr class="tr-shadow">
                                     <td>
                                         <label class="au-checkbox">
@@ -254,6 +287,7 @@
 </div>
 
 </div>
+
 <?php require_once "modals.php"; ?>
 <!-- Jquery JS-->
 <script src="vendor/jquery-3.2.1.min.js"></script>

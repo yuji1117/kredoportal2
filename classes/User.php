@@ -64,11 +64,11 @@ class User extends Config{
     }
 
 
-    public function save($username,$password,$email,$firstname,$lastname){
+    public function save($username,$user_password,$user_email,$user_firstname,$user_lastname,$user_status,$user_course,$user_address,$user_website,$user_fb,$user_twitter,$user_insta,$user_youtube,$user_admission,$user_graduate){
 
         $new_password = md5($password);
-        $sql = "INSERT INTO users(username,email,password,firstname,lastname,status,course,address,website,fb,twitter,insta,youtube,admisson,graduate)
-        VALUES('$username','$email','$new_password','$firstname','$lastname','$status','$course','$address','$website','$fb','$twitter','$insta','$youtube','$admisson','$gtraduate')";
+        $sql = "INSERT INTO users(username,user_email,user_password,user_firstname,user_lastname,user_status,user_course,user_address,user_website,user_fb,user_twitter,user_insta,user_youtube,user_admission,user_graduate)
+        VALUES('$username','$user_email','$user_password','$user_firstname','$user_lastname','$user_status','$user_course','$user_address','$user_website','$user_fb','$user_twitter','$user_insta','$user_youtube','$user_admission','$user_graduate')";
         //execute or run the query
         $result = $this->conn->query($sql);
 
@@ -79,10 +79,10 @@ class User extends Config{
             echo "Error:" . $this->conn->error;
         }
     }
-    public function update($id,$username,$email,$firstname,$lastname,$status,$course,$address,$website,$fb,$twitter,$insta,$youtube,$admisson,$gtraduate){
+    public function update($id,$username,$user_password,$user_email,$user_firstname,$user_lastname,$user_status,$user_course,$user_address,$user_website,$user_fb,$user_twitter,$user_insta,$user_youtube,$user_admission,$user_graduate){
         $sql = "UPDATE users SET username='$username', email='$email', firstname='$firstname',
         lastname='$lastname', status='$status', course='$course',address='$address', website='$website',
-        fb='$fb', twitter='$twitter', insta='$insta',youtube='$youtube', admisson='$admisson', graduate='$graduate' WHERE user_id=$id";
+        fb='$fb', twitter='$twitter', insta='$insta',youtube='$youtube', admission='$admission', graduate='$graduate' WHERE user_id=$id";
         //sescute or run query
         $result = $this->conn->query($sql);
         if($result){

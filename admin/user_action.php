@@ -1,5 +1,5 @@
 <?php
-    require_once "User.php";
+    require_once "../classes/User.php";
 
     //create instance
     $user = new User;
@@ -18,18 +18,18 @@
         $twitter = $_POST['twitter'];
         $insta = $_POST['insta'];
         $youtube = $_POST['youtube'];
-        $admisson = $_POST['admisson'];
+        $admission = $_POST['admission'];
         $graduate = $_POST['graduate'];
-        $result = $user->save($username,$password,$email,$firstname,$lastname,$status,$course,$address,$website,$fb,$twitter,$insta,$youtube,$admisson,$graduate);
+        $result = $user->save($username,$password,$email,$firstname,$lastname,$status,$course,$address,$website,$fb,$twitter,$insta,$youtube,$admission,$graduate);
 
         if($result){
-            echo"<script>window.location.replace('user.php');</script>";
+            echo"<script>window.location.replace('users.php');</script>";
         }else{
             echo"Error!!";
         }
     }
     elseif($_GET['action']=='update'){
-        $user_id = $_POST['user_id'];
+        $id = $_POST['id'];
         $username = $_POST['username'];
         $email = $_POST['email'];
         $firstname = $_POST['firstname'];
@@ -42,19 +42,19 @@
         $twitter = $_POST['twitter'];
         $insta = $_POST['insta'];
         $youtube = $_POST['youtube'];
-        $admisson = $_POST['admisson'];
+        $admission = $_POST['admission'];
         $graduate = $_POST['graduate'];
-        $result = $user->update($user_id,$username,$email,$firstname,$lastname,$status,$course,$address,$website,$fb,$twitter,$insta,$youtube,$admisson,$graduate);
+        $result = $user->update($id,$username,$email,$firstname,$lastname,$status,$course,$address,$website,$fb,$twitter,$insta,$youtube,$admission,$graduate);
 
         if($result){
-            echo"<script>window.location.replace('user.php');</script>";
+            echo"<script>window.location.replace('users.php');</script>";
         }
 
     }
 
     elseif($_GET['action']=='delete'){
-        $user_id = $_GET['user_id'];
-        $result = $user->delete($user_id);
+        $id = $_GET['id'];
+        $result = $user->delete($id);
         if($result){
             echo "<script>window.location.replace('users.php');</script>";
         }

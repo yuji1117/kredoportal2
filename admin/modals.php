@@ -27,20 +27,20 @@
                         </div>
                         <div class="row form-group">
                             <div class="col col-md-3">
-                                <label for="email-input" class=" form-control-label">Email</label>
+                                <label for="email" class=" form-control-label">Email</label>
                             </div>
                             <div class="col-12 col-md-9">
-                                <input type="email" id="email-input" name="email-input" placeholder="Enter Email"
+                                <input type="email" id="email" name="email" placeholder="Enter Email"
                                     class="form-control">
                                 <small class="help-block form-text">Please enter your email</small>
                             </div>
                         </div>
                         <div class="row form-group">
                             <div class="col col-md-3">
-                                <label for="password-input" class=" form-control-label">Password</label>
+                                <label for="password" class=" form-control-label">Password</label>
                             </div>
                             <div class="col-12 col-md-9">
-                                <input type="password" id="password-input" name="password-input" placeholder="Password"
+                                <input type="password" id="password" name="password" placeholder="Password"
                                     class="form-control">
                                 <small class="help-block form-text">Please enter a complex password</small>
                             </div>
@@ -50,9 +50,9 @@
                                 <label for="password-input" class=" form-control-label">First Name</label>
                             </div>
                             <div class="col-12 col-md-9">
-                                <input type="password" id="password-input" name="password-input" placeholder="First Name"
+                                <input type="text" id="firstname" name="firstname" placeholder="First Name"
                                     class="form-control">
-                                <small class="help-block form-text">Please enter a complex password</small>
+                                <small class="help-block form-text">Please enter a complex Firstname</small>
                             </div>
                         </div>
                         <div class="row form-group">
@@ -60,29 +60,30 @@
                                 <label for="password-input" class=" form-control-label">Last Name</label>
                             </div>
                             <div class="col-12 col-md-9">
-                                <input type="password" id="password-input" name="password-input" placeholder="Last Name"
+                                <input type="text" id="lastname" name="lastname" placeholder="Last Name"
                                     class="form-control">
-                                <small class="help-block form-text">Please enter a complex password</small>
+                                <small class="help-block form-text">Please enter a complex Lastname</small>
                             </div>
                         </div>
+
                         <div class="row form-group">
                             <div class="col col-md-3">
                                 <label for="select" class=" form-control-label">Status</label>
                             </div>
                             <div class="col-12 col-md-9">
-                                <select name="select" id="select" class="form-control">
+                                <select name="status" id="select" class="form-control">
                                     <option value="0">Please select</option>
                                     <option value="1">Student</option>
                                     <option value="2">Teacher</option>
                                     <option value="3">Staff</option>
                                     <option value="4">CEO</option>
-                                    <option value="5">Alumni</option>
+                                    <option value="5">graduated</option>
                                 </select>
                             </div>
                         </div>
                         <div class="row form-group">
                             <div class="col col-md-3">
-                                <label class=" form-control-label">Corse</label>
+                                <label class=" form-control-label">Course</label>
                             </div>
                             <div class="col col-md-9">
                                 <div class="form-check-inline form-check">
@@ -119,6 +120,32 @@
                         </div>
                         <div class="row form-group">
                             <div class="col col-md-3">
+                                <label for="date-input" class=" form-control-label">Date</label>
+                            </div>
+                            <div class="col-12 col-md-4">
+                                <input type="date" id="date" name="admission" placeholder="Start day"
+                                    class="form-control">
+                                <small class="help-block form-text">Please enter a Start Day</small>
+                            </div>
+                            to
+                            <div class="col-12 col-md-4">
+                                <input type="date" id="date" name="graduate" placeholder="Graduate day"
+                                    class="form-control">
+                                <small class="help-block form-text">Please enter a Graduate Day</small>
+                            </div>
+                        </div>
+                        <div class="row form-group">
+                            <div class="col col-md-3">
+                                <label for="username" class=" form-control-label">Address</label>
+                            </div>
+                            <div class="col-12 col-md-9">
+                                <input type="text" id="address" name="adress" placeholder="User Address"
+                                    class="form-control">
+                                <small class="form-text text-muted">This is a your Address</small>
+                            </div>
+                        </div>
+                        <div class="row form-group">
+                            <div class="col col-md-3">
                                 <label for="file-input" class=" form-control-label">File input</label>
                             </div>
                             <div class="col-12 col-md-9">
@@ -130,7 +157,7 @@
                                 <label for="text-input" class=" form-control-label">Website URL</label>
                             </div>
                             <div class="col-12 col-md-9">
-                                <input type="url" id="text-input" name="url"　value="http://" 
+                                <input type="url" id="website" name="website"　value="http://" 
                                     class="form-control">
                             </div>
                         </div>
@@ -139,7 +166,7 @@
                                 <label for="text-input" class=" form-control-label">FaceBook URL</label>
                             </div>
                             <div class="col-12 col-md-9">
-                                <input type="text" id="text-input" name="text-input" placeholder="url"
+                                <input type="url" id="fb" name="fb" placeholder="url"
                                     class="form-control">
                             </div>
                         </div>
@@ -148,7 +175,7 @@
                                 <label for="text-input" class=" form-control-label">twitter URL</label>
                             </div>
                             <div class="col-12 col-md-9">
-                                <input type="url" id="text-input" name="url"　value="http://" 
+                                <input type="url" id="twitter" name="twitter"　value="http://" 
                                     class="form-control">
                             </div>
                         </div>
@@ -157,16 +184,25 @@
                                 <label for="text-input" class=" form-control-label">Instagram URL</label>
                             </div>
                             <div class="col-12 col-md-9">
-                                <input type="text" id="text-input" name="text-input" placeholder="url"
+                                <input type="url" id="insta" name="insta" placeholder="url"
                                     class="form-control">
                             </div>
                         </div>
                         <div class="row form-group">
                             <div class="col col-md-3">
-                                <label for="text-input" class=" form-control-label">github URL</label>
+                                <label for="text-input" class=" form-control-label">Youtube URL</label>
                             </div>
                             <div class="col-12 col-md-9">
-                                <input type="text" id="text-input" name="text-input" placeholder="url"
+                                <input type="url" id="youtube" name="youtube" placeholder="url"
+                                    class="form-control">
+                            </div>
+                        </div>
+                        <div class="row form-group">
+                            <div class="col col-md-3">
+                                <label for="text-input" class=" form-control-label">Github URL</label>
+                            </div>
+                            <div class="col-12 col-md-9">
+                                <input type="url" id="github" name="github" placeholder="url"
                                     class="form-control">
                             </div>
                         </div>

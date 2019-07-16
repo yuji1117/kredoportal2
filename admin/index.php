@@ -1,7 +1,5 @@
 <?php
-
 include 'header.php';
-
 ?>
 
             <!-- MAIN CONTENT-->
