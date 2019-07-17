@@ -77,7 +77,7 @@
                                     <option value="2">Teacher</option>
                                     <option value="3">Staff</option>
                                     <option value="4">CEO</option>
-                                    <option value="5">graduated</option>
+                                    <option value="5">Graduated</option>
                                 </select>
                             </div>
                         </div>

@@ -1,4 +1,8 @@
-<?php require_once "header.php"; ?>
+<?php require_once "header.php"; 
+
+$users = new User;
+
+?>
 
 <!-- MAIN CONTENT-->
 <div class="main-content">
@@ -57,24 +61,24 @@
                     <div class="table-responsive table-responsive-data2">
                         <table class="table table-data2">
                             <thead>
-                                <tr>
+                                <tr class="tr-shadow">
                                     <th>
                                         <label class="au-checkbox">
                                             <input type="checkbox">
                                             <span class="au-checkmark"></span>
                                         </label>
                                     </th>
-                                    <th>ID</th>
                                     <th>username</th>
                                     <th>Firstname</th>
                                     <th>Lastname</th>
                                     <th>status</th>
                                     <th>course</th>
-                                    <th>Update at</th>
+                                    <th>Updated at</th>
                                     <th></th>
-                                </tr>
+                                <tr class="spacer"></tr>
                             </thead>
                             <tbody>
+                              
                             <?php
                                 $get_users = $users->selectAll();
 
@@ -82,18 +86,38 @@
                                     foreach($get_users as $key => $row){
                                         $id = $row['user_id'];
                                         echo"<tr>";
-                                        echo"<td>".$row['user_id']. "</td>";
-                                        echo"<td>".$row['username']. "</td>";
-                                        echo"<td>".$row['firstname']."</td>";
-                                        echo"<td>".$row['lastname']."</td>";
-                                        echo"<td>".$row['status']."</td>";
-                                        echo"<td>".$row['course']."</td>";
-                                        echo"<td>".$row['updated_at']."</td>";
                                         echo"<td>
-                                        <a href='edit_user.php?user_id=$id' class='btn btn-info btn-sm'>Edit</a>";
+                                        <label class='au-checkbox'>
+                                            <input type='checkbox'>
+                                            <span class='au-checkmark'></span>
+                                        </label>";
+                                        echo"<td>".$row['username']. "</td>";
+                                        echo"<td>".$row['user_firstname']."</td>";
+                                        echo"<td>".$row['user_lastname']."</td>";
+                                        echo"<td>".$row['status_name']."</td>";
+                                        echo"<td>".$row['user_course']."</td>";
+                                        echo"<td>".$row['user_updated']."</td>";
+                                        echo"<td>
+                                        <div class='table-data-feature'>
+                                            <button class='item' href='user_action.php?user_id=$id' data-toggle='tooltip' data-placement='top'
+                                                    title='Send'>
+                                                    <i class='zmdi zmdi-mail-send'></i>
+                                            </button>
+                                            <a class='item' href='edit_user.php?user_id=$id' data-toggle='tooltip' data-placement='top' title='Edit'>
+                                            <i class='zmdi zmdi-edit'></i>
+                                            </a>
+                                            
+                                            <button class='item' data-toggle='tooltip' data-placement='top'
+                                                title='More'>
+                                                <i class='zmdi zmdi-more'></i>
+                                            </button>";
 
                                         ?>
-                                        <a href='user_action.php?action=delete&user_id=<?php echo $id; ?>' class='btn btn-danger btn-sm' onclick='return confirm("Are you sure you want to delete?");'>Delete</a>                                    
+                                        <a class='item' href='user_action.php?action=delete&user_id=<?php echo $id; ?>' data-toggle='tooltip' data-placement='top'
+                                                title='Delete' onclick='return confirm("Are you sure you want to delete?");'>
+                                                <i class='zmdi zmdi-delete'></i>
+                                        </a>
+                                        </div>
                                         </td>
                                     </tr>
 
@@ -104,8 +128,6 @@
                                     echo"<tr><td colspan='7' class='text-center'>Nothing toshow</td></tr>";
                                 }                    
                             ?>
-
-
                             
                                 <tr class="tr-shadow">
                                     <td>

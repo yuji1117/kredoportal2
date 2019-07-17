@@ -35,7 +35,8 @@ class User extends Config{
 
     public function selectAll(){
         //query
-        $sql = "SELECT * FROM users";
+        $sql = "SELECT * FROM users
+                INNER JOIN status ON users.status_id=status.status_id";
         
         //execute or run the query
         $result = $this->conn->query($sql);
@@ -64,7 +65,7 @@ class User extends Config{
     }
 
 
-    public function save($username,$user_password,$user_email,$user_firstname,$user_lastname,$user_status,$user_course,$user_address,$user_website,$user_fb,$user_twitter,$user_insta,$user_youtube,$user_admission,$user_graduate){
+    public function save($username,$user_email,$user_password,$user_firstname,$user_lastname,$user_status,$user_course,$user_address,$user_website,$user_fb,$user_twitter,$user_insta,$user_youtube,$user_admission,$user_graduate){
 
         $new_password = md5($password);
         $sql = "INSERT INTO users(username,user_email,user_password,user_firstname,user_lastname,user_status,user_course,user_address,user_website,user_fb,user_twitter,user_insta,user_youtube,user_admission,user_graduate)
@@ -80,9 +81,9 @@ class User extends Config{
         }
     }
     public function update($id,$username,$user_password,$user_email,$user_firstname,$user_lastname,$user_status,$user_course,$user_address,$user_website,$user_fb,$user_twitter,$user_insta,$user_youtube,$user_admission,$user_graduate){
-        $sql = "UPDATE users SET username='$username', email='$email', firstname='$firstname',
-        lastname='$lastname', status='$status', course='$course',address='$address', website='$website',
-        fb='$fb', twitter='$twitter', insta='$insta',youtube='$youtube', admission='$admission', graduate='$graduate' WHERE user_id=$id";
+        $sql = "UPDATE users SET username='$username', user_email='$user_email', user_firstname='$user_firstname',
+        user_lastname='$user_lastname', user_status='$user_status', user_course='$user_course',user_address='$user_address', user_website='$user_website',
+        user_fb='$user_fb', user_twitter='$user_twitter', user_insta='$user_insta',user_youtube='$user_youtube', user_admission='$user_admission', user_graduate='$user_graduate' WHERE user_id=$id";
         //sescute or run query
         $result = $this->conn->query($sql);
         if($result){
