@@ -87,12 +87,20 @@ $get_user = $users->selectOne($id);
                                         </div>
                                         <div class="col-12 col-md-9">
                                             <select name="status" id="select" class="form-control" value="<?php echo $get_user['user_status']; ?>">
-                                                <option value="0">Please select</option>
-                                                <option value="1">Student</option>
-                                                <option value="2">Teacher</option>
-                                                <option value="3">Staff</option>
-                                                <option value="4">CEO</option>
-                                                <option value="5">graduated</option>
+
+                                            <?php
+                                            $get_status = $users->selectAllStatus();
+                                            foreach($get_status as $key => $row){
+                                                $status_id = $row['status_id'];
+                                                $status_name = $row['status_name'];
+                                                ?>
+                                                <option value="<?php echo $status_id; ?>"
+                                                <?php if ($get_user['status_id'] == $status_id) echo "selected";?>>
+                                                <?php echo $status_name; ?>
+                                                </option>
+                                                <?php
+                                            }
+                                            ?>
                                             </select>
                                         </div>
                                     </div>
@@ -262,7 +270,6 @@ $get_user = $users->selectOne($id);
 
 </div>
 
-<?php require_once "modals.php"; ?>
 <!-- Jquery JS-->
 <script src="vendor/jquery-3.2.1.min.js"></script>
 <!-- Bootstrap JS-->

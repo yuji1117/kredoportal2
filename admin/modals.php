@@ -73,11 +73,12 @@
                             <div class="col-12 col-md-9">
                                 <select name="status" id="select" class="form-control">
                                     <option value="0">Please select</option>
-                                    <option value="1">Student</option>
-                                    <option value="2">Teacher</option>
-                                    <option value="3">Staff</option>
-                                    <option value="4">CEO</option>
-                                    <option value="5">Graduated</option>
+                                    <option value="1">admin</option>
+                                    <option value="2">Student</option>
+                                    <option value="3">Teacher</option>
+                                    <option value="4">Staff</option>
+                                    <option value="5">CEO</option>
+                                    <option value="6">Graduated</option>
                                 </select>
                             </div>
                         </div>

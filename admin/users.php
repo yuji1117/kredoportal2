@@ -47,7 +47,6 @@ $users = new User;
                             <button class="au-btn au-btn-icon au-btn--green au-btn--small" data-toggle="modal" data-target="#add_user">
                                 <i class="zmdi zmdi-plus"></i>add user</button>
 
-
                             <div class="rs-select2--dark rs-select2--sm rs-select2--dark2">
                                 <select class="js-select2" name="type">
                                     <option selected="selected">Export</option>
@@ -122,7 +121,7 @@ $users = new User;
                                     </tr>
 
                                     <?php
-                                    }
+                                    
 
                                 }else{
                                     echo"<tr><td colspan='7' class='text-center'>Nothing toshow</td></tr>";
