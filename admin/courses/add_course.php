@@ -2,7 +2,7 @@
 
 <!-- User modal -->
 <!-- Modal -->
-<div class="modal fade" id="add_user" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+<div class="modal fade" id="add_course" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
     aria-hidden="true">
     <div class="modal-dialog modal-lg" role="document">
         <div class="modal-content">
@@ -12,7 +12,7 @@
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
-            <form action="user_action.php?action=add" method="post" enctype="multipart/form-data" class="form-horizontal">
+            <form action="action_course.php?action=add" method="post" enctype="multipart/form-data" class="form-horizontal">
             <div class="modal-body">
                 <div class="col-lg-12">
                         <div class="row form-group">
@@ -20,7 +20,7 @@
                                 <label for="depertment_id" class=" form-control-label">Depertment</label>
                             </div>
                             <div class="col-12 col-md-9">
-                                <select class="form-control" name="type">
+                                <select class="form-control" name="dept_id">
                                     <option value="1">IT</option>
                                     <option value="2">English</option>
                                 </select>

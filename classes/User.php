@@ -124,6 +124,4 @@ class User extends Config{
     }
 }
 
-
-
 ?>

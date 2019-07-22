@@ -65,25 +65,22 @@ include_once '../classes/User.php';
                 <div class="container-fluid">
                     <ul class="navbar-mobile__list list-unstyled">
                         <li class="has-sub">
-                            <a class="js-arrow" href="#">
+                            <a class="js-arrow" href="/index.php">
                                 <i class="fas fa-tachometer-alt"></i>Dashboard</a>
-                            <ul class="navbar-mobile-sub__list list-unstyled js-sub-list">
-                                <li>
-                                    <a href="index.php">Dashboard 1</a>
-                                </li>
-                                <li>
-                                    <a href="index2.html">Dashboard 2</a>
-                                </li>
-
-                            </ul>
+                            <li class="navbar-mobile-sub__list list-unstyled js-sub-list">
+                            </li>
                         </li>
                         <li>
                             <a href="users.php">
                                 <i class="fas fa-chart-bar"></i>Users</a>
                         </li>
                         <li>
-                            <a href="edit_user.php">
-                                <i class="fas fa-table"></i>Tables</a>
+                            <a href="courses/course.php">
+                                <i class="far fa-check-square"></i>Courses</a>
+                        </li>
+                        <li>
+                            <a href="edit.php">
+                                <i class="fas fa-table"></i>Portfolio</a>
                         </li>
                         <li>
                             <a href="form.html">
@@ -182,6 +179,10 @@ include_once '../classes/User.php';
                         <li>
                             <a href="users.php">
                                 <i class="fas fa-chart-bar"></i>Users</a>
+                        </li>
+                        <li>
+                            <a href="courses/course.php">
+                                <i class="far fa-check-square"></i>Courses</a>
                         </li>
                         <li>
                             <a href="edit.php">

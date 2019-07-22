@@ -160,28 +160,26 @@ include_once '../../classes/User.php';
          <!-- MENU SIDEBAR-->
          <aside class="menu-sidebar d-none d-lg-block">
             <div class="logo">
-                <a href="#">
-                    <img src="images/icon/kredoportal2admin.png" alt="Cool Admin" />
+                <a href="../index.php">
+                    <img src="../images/icon/kredoportal2admin.png" alt="Cool Admin" />
                 </a>
             </div>
             <div class="menu-sidebar__content js-scrollbar1">
                 <nav class="navbar-sidebar">
                     <ul class="list-unstyled navbar__list">
                         <li class="active has-sub">
-                            <a class="js-arrow" href="#">
+                            <a class="js-arrow" href="../index.php">
                                 <i class="fas fa-tachometer-alt"></i>Dashboard</a>
                             <ul class="list-unstyled navbar__sub-list js-sub-list">
-                                <li>
-                                    <a href="index.html">Dashboard 1</a>
-                                </li>
-                                <li>
-                                    <a href="index2.html">Dashboard 2</a>
-                                </li>
                             </ul>
                         </li>
                         <li>
-                            <a href="users.php">
+                            <a href="../users.php">
                                 <i class="fas fa-chart-bar"></i>Users</a>
+                        </li>
+                        <li>
+                            <a href="course.php">
+                                <i class="far fa-check-square"></i>Courses</a>
                         </li>
                         <li>
                             <a href="edit.php">

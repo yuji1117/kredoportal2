@@ -6,7 +6,7 @@ class Course extends Config{
 
     public function selectAll(){
         //query
-        $sql = "SELECT * FROM courses INNER JOIN depertments ON courses.dept_id=depertments.dept_id";
+        $sql = "SELECT * FROM courses INNER JOIN departments ON courses.dept_id=departments.dept_id";
         
         //execute or run the query
         $result = $this->conn->query($sql);

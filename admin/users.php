@@ -122,7 +122,7 @@ $users = new User;
 
                                     <?php
                                     
-
+                                }
                                 }else{
                                     echo"<tr><td colspan='7' class='text-center'>Nothing toshow</td></tr>";
                                 }                    

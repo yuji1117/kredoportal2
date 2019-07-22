@@ -18,7 +18,7 @@ $courses = new Course;
         </div>
         <div class="row">
             <div class="col-md-12">
-                <!-- USER DATA -->
+                <!-- Courses DATA -->
                 <div class="course-data m-b-30">
                     <h3 class="title-3 m-b-30"><i class="zmdi zmdi-account-calendar"></i>Course data</h3>
                     <div class="table-data__tool">
@@ -45,7 +45,7 @@ $courses = new Course;
 
                         <div class="table-data__tool-right">
                             <!-- Button trigger modal -->
-                            <button class="au-btn au-btn-icon au-btn--green au-btn--small" data-toggle="modal" data-target="#add_user">
+                            <button class="au-btn au-btn-icon au-btn--green au-btn--small" data-toggle="modal" data-target="#add_course">
                                 <i class="zmdi zmdi-plus"></i>add course</button>
 
                             <div class="rs-select2--dark rs-select2--sm rs-select2--dark2">
@@ -88,7 +88,7 @@ $courses = new Course;
                                             <input type='checkbox'>
                                             <span class='au-checkmark'></span>
                                         </label>";
-                                        echo"<td>".$row['dept_id']. "</td>";
+                                        echo"<td>".$row['dept_name']. "</td>";
                                         echo"<td>".$row['course_name']. "</td>";
                                         echo"<td>".$row['course_description']."</td>";
                                         echo"<td>
@@ -149,7 +149,7 @@ $courses = new Course;
 
 </div>
 
-<?php require_once "add.course.php"; ?>
+<?php require_once "add_course.php"; ?>
 <!-- Jquery JS-->
 <script src="../vendor/jquery-3.2.1.min.js"></script>
 <!-- Bootstrap JS-->
